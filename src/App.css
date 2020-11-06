@@ -1,8 +1,12 @@
 .App {
   text-align: center;
+  background: #E1DADA;
+  padding-bottom:200px;
 }
 .qoute{
-  margin: 7.5%;
+  margin-top: 50px;
+  margin-bottom: 100px;
+  font-size: 1.5rem;
 }
 .routes{
   padding: 0 15%;

@@ -1,11 +1,14 @@
 import React from 'react'
+import SellerForm from '../../components/sellerForm/SellerForm.component'
+ function SellArt() {
+  
 
-function SellArt() {
-    return (
-        <div>
-            sellArt
-        </div>
-    )
+  return (
+    <div>
+    <SellerForm/>
+    </div>
+  );
 }
+
 
 export default SellArt

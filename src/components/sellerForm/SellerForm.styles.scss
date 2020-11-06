@@ -1,0 +1,23 @@
+.SellerForm{
+    text-align: left;
+    form{
+        width: 600px;
+        margin: 0 auto;
+        padding: 30px;
+        background: rgba(128, 128, 128, 0.185);
+    }
+    label{
+        margin-top: 20px;
+        display: block;
+    }
+    input{
+        display: block;
+        width: 100%;
+    }
+    .btn{
+        margin-top: 20px;
+        padding:10px;
+        background: rgba(204, 195, 62, 0.555);
+        border-radius:8px;
+    }
+}

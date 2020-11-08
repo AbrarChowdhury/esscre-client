@@ -3,7 +3,7 @@ import { Link, NavLink} from 'react-router-dom'
 import './Navbar.styles.scss'
 function Navbar() {
     return (
-        <div>
+        <div className="Navbar">
             <ul>
                 <li className="brand"><Link to="/">ESSCRE</Link></li>
                 <li><NavLink to="/sell">Sell Art</NavLink></li>

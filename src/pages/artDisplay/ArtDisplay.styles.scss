@@ -1,6 +1,14 @@
 .ArtDisplay{
+    text-align: left;
     img{
-        height: 100%;
-        width: auto;
+        height: auto;
+        width: 100%;
+    }
+    .story{
+        font-size: larger;
+    }
+    span{
+        float: right;
+        font-weight: 400;
     }
 }

@@ -6,9 +6,9 @@ function Navbar() {
         <div>
             <ul>
                 <li className="brand"><Link to="/">ESSCRE</Link></li>
-                <li><NavLink to="/art">Buy Art</NavLink></li>
                 <li><NavLink to="/sell">Sell Art</NavLink></li>
                 <li><NavLink to="/custom">Custom Order</NavLink></li>
+                <li><NavLink to="/art">Buy Art</NavLink></li>
             </ul>
         </div>
     )

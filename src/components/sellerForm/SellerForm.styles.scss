@@ -1,10 +1,11 @@
 .SellerForm{
     text-align: left;
     form{
-        width: 600px;
+        width: 540px;
         margin: 0 auto;
         padding: 30px;
-        background: rgba(128, 128, 128, 0.185);
+        background: white;
+        border: 2px solid black;
     }
     label{
         margin-top: 20px;
@@ -12,12 +13,31 @@
     }
     input{
         display: block;
-        width: 100%;
+        width: 510px;
+        padding: 10px;
+        margin:0;
+    }
+    .halfInput{
+        width: 240px;
+        
+    }
+    select{
+        display: block;
+        width: 263px;
+        padding: 10px;
+        margin: 0;
     }
     .btn{
         margin-top: 20px;
         padding:10px;
-        background: rgba(204, 195, 62, 0.555);
+        background: white;
         border-radius:8px;
+        width: 510px;
     }
+    .btn:hover{
+        cursor: pointer;
+        color: white;
+        background: black;
+    }
+
 }

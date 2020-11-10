@@ -1,0 +1,14 @@
+.CheckoutBtn{
+    button{
+        width: 100%;
+        padding: 10px;
+        border-radius: 5px;
+        font-weight: 600;
+        font-size: 16px;
+    }
+    button:hover{
+        background: black;
+        color: white;
+        cursor: pointer;
+    }
+}

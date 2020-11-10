@@ -1,6 +1,8 @@
 import React,{ useState } from 'react'
 import artData from '../../artData'
 import _ from 'lodash'
+import CheckoutBtn from '../../components/checkoutBtn/checkoutBtn.component'
+import AddToCartBtn from '../../components/addToCartBtn/AddToCartBtn.component'
 import './ArtDisplay.styles.scss'
 import Grid from '@material-ui/core/Grid';
 import ModalImage from '../../components/modalImage/modalImage.component'
@@ -23,8 +25,8 @@ function ArtDisplay(props) {
                     <div className="story">{art.story}</div>
                     <br/><br/>
                     <Grid container direction="row"  spacing={8}>
-                        <Grid item xs={6}>Add to cart</Grid>
-                        <Grid item xs={6}>Checkout</Grid>
+                        <Grid item xs={6}><AddToCartBtn name={art.name} imageUrl={art.imageUrl} price={art.price}/></Grid>
+                        <Grid item xs={6}><CheckoutBtn/></Grid>
                         <Grid item xs={4}>
                             <h3>Media:  <span>{art.medium}</span></h3>
                             <h3>Size:  <span>{art.size}</span></h3>

@@ -2,14 +2,11 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
 import CardActionArea from '@material-ui/core/CardActionArea';
-import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
-import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import './artCard.styles.scss'
 import { useHistory } from 'react-router-dom';
-import _ from 'lodash'
 const useStyles = makeStyles({
   root: {
     maxWidth: 345,
@@ -25,7 +22,7 @@ function ArtCard({data}) {
 
   const redirect = () => {
     setTimeout(1000)
-    history.push(`/art/${_.kebabCase(data.name)}`)
+    history.push(`/art/${data._id}`)
   }
 
   return (
@@ -34,19 +31,19 @@ function ArtCard({data}) {
       <CardActionArea>
         <CardMedia
           className={classes.media}
-          image = {data.imageUrl}
-          title = {data.name}
+          image = {data.image}
+          title = {data.title}
           onClick = {redirect}
         />
         <CardContent>
           <Typography gutterBottom variant="h5" component="h2">
-            {data.name}
+            {data.title}
           </Typography>
           <Typography variant="body3" color="textSecondary" component="h3">
           Worth: {data.price}
           </Typography>
           <Typography variant="body2" color="textSecondary" component="p">
-          By: {data.creator}
+          By: {data.artist  }
           </Typography>
         </CardContent>
       </CardActionArea>

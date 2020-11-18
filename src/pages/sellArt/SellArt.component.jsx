@@ -1,11 +1,14 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { UserContext } from '../../context/userContext'
 import SellerForm from '../../components/sellerForm/SellerForm.component'
- function SellArt() {
+import UserAuth from '../../components/userAuth/userAuth.component'
+function SellArt() {
+  const { user } = useContext(UserContext)
   
 
   return (
     <div>
-    <SellerForm/>
+    {user ?  <SellerForm/> : <UserAuth/> }
     </div>
   );
 }

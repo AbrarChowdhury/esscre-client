@@ -1,10 +1,10 @@
 import React from 'react'
 import ArtCollection from '../../components/artCollection/ArtCollection.component'
-function Art() {
+function Art({data}) {
     return (
         <div>
         <br/><br/>
-            <ArtCollection/>
+            <ArtCollection data={data}/>
         </div>
     )
 }

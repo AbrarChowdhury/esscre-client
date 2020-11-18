@@ -1,10 +1,22 @@
-import React from 'react'
+import React, {useContext} from 'react'
+import { UserContext } from '../../context/userContext'
 import { useForm } from "react-hook-form";
 import './SellerForm.styles.scss'
 import Grid from '@material-ui/core/Grid'
+const axios = require('axios')
 function SellerForm() {
+  const { user } = useContext(UserContext)
   const { register, handleSubmit, watch, errors } = useForm();
-  const onSubmit = data => console.log(data);
+  const onSubmit = data => {
+  const postData = {...data, ...user}
+    axios.post('http://localhost:5000/art', postData)
+          .then(function (response) {
+            alert(response)
+        })
+          .catch(function (error) {
+            alert('some error occured please try again')
+          });
+  };
 
   console.log(watch("example")); 
     return (
@@ -12,7 +24,7 @@ function SellerForm() {
             <form onSubmit={handleSubmit(onSubmit)}>
             <label>Title: </label>
             <input name="title" ref={register({ required: true })} />
-            {errors.name && <span>Please enter your name</span>}
+            {errors.title && <span>Please enter a title</span>}
             
             <label>Story: </label>
             <input name="story" ref={register({ required: true })} />
@@ -48,8 +60,8 @@ function SellerForm() {
               </Grid>
               
               <Grid item xs={6}>
-                <label>Attact Image:</label>
-                <input name="image" type="file" ref={register({ required: true })} />
+                <label>Image Url:</label>
+                <input name="image" type="text" ref={register({ required: true })} />
                 {errors.price && <span>You must attach the image</span>}
               </Grid>
               

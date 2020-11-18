@@ -4,12 +4,12 @@ export const CartContext = createContext();
 const CartContextProvider = (props) => {
   const [cartItems, setCartItems] = useState([]);
 
-  const addCartItem = (name, imageUrl, price) => {
-    setCartItems([...cartItems, { name, imageUrl, price }])
+  const addCartItem = (id, title, image, price) => {
+    setCartItems([...cartItems, {id, title, image, price }])
   };
   
-  const removeCartItem = (name) => {
-    setCartItems(cartItems.filter(item => item.name !== name));
+  const removeCartItem = (id) => {
+    setCartItems(cartItems.filter(item => item.id !== id));
   }
   
   return (

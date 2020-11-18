@@ -12,8 +12,10 @@ const Checkout = () => {
       setTotal(totalPrice)
     
     }, [cartItems])
+
     return (
         <div className='checkout-page'>
+       
         <div className='checkout-header'>
           <div className='header-block'>
             <span>Product</span>

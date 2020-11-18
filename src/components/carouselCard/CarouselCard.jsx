@@ -1,4 +1,4 @@
-import { red } from '@material-ui/core/colors'
+
 import React from 'react'
 import './CarouselCard.styles.scss'
 function CarouselCard({item}) {

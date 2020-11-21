@@ -1,5 +1,4 @@
 import React, {useContext, useEffect, useState} from 'react'
-import _ from 'lodash'
 import CheckoutBtn from '../../components/checkoutBtn/checkoutBtn.component'
 import AddToCartBtn from '../../components/addToCartBtn/AddToCartBtn.component'
 import './ArtDisplay.styles.scss'
@@ -9,16 +8,14 @@ import { ArtContext } from '../../context/artContext'
  
 
 function ArtDisplay(props) {
-    const {artData} = useContext(ArtContext)
-    const [art, setArt]=useState()
+    const { artData } = useContext(ArtContext)
+    const [ art, setArt ]= useState()
+    const id =props.match.params.name
     useEffect(()=>{
         
-        console.log('ArtDisplay',artData)
-        const id =props.match.params.name
-        if(artData){
-            artData.map((currentArt) => (currentArt._id) === id ? setArt(currentArt):null)        
-        }
-    },[])
+        artData && artData.map((currentArt) => (currentArt._id) === id ? setArt(currentArt):null)        
+    
+    },[artData])
     
     return (
         <div className="ArtDisplay">

@@ -16,7 +16,7 @@ import { ArtContext } from './context/artContext'
 function App() {
   const [data, setData] = useState(null);
   useEffect(() => {
-    axios.get('http://localhost:5000/art')
+    axios.get('https://esscre.herokuapp.com/art'{withCredentials: true})
   .then(function (response) {
     const responseData = response.data;
     console.log(responseData)

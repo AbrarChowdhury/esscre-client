@@ -17,8 +17,6 @@ function SellerForm() {
             alert('some error occured please try again')
           });
   };
-
-  console.log(watch("example")); 
     return (
         <div className="SellerForm">
             <form onSubmit={handleSubmit(onSubmit)}>

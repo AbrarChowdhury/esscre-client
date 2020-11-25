@@ -9,7 +9,7 @@ function SellerForm() {
   const { register, handleSubmit, watch, errors } = useForm();
   const onSubmit = data => {
   const postData = {...data, ...user}
-    axios.post('http://localhost:5000/art', postData)
+    axios.post('https://esscre.herokuapp.com/art', postData)
           .then(function (response) {
             alert(response)
         })

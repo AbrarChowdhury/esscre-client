@@ -6,7 +6,7 @@ function Navbar() {
     return (
         <div className="Navbar">
             <ul>
-                <li className="brand"><Link to="/">ESSCRE</Link></li>
+                <li className="brand"><Link to="/">esscre</Link></li>
                 <li><CartIcon/></li>
                 <li><NavLink to="/sell">Sell Art</NavLink></li>
                 <li><NavLink to="/custom">Custom Order</NavLink></li>

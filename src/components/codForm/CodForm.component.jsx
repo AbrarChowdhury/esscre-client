@@ -1,5 +1,6 @@
 import React from 'react'
 import {useForm} from 'react-hook-form'
+import './CodForm.styles.scss'
 const axios = require('axios')
 
 function CodForm({arts}){
@@ -27,7 +28,7 @@ function CodForm({arts}){
                 <input name="phone" ref={register({ required: true })} />
                 {errors.phone && <span>Please enter your phone number</span>}
                 
-                <label>:Address: </label>
+                <label>Address: </label>
                 <input name="address" ref={register({ required: true })} />
                 {errors.address && <span>Please enter your delivery address</span>}
                 

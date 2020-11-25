@@ -1,6 +1,7 @@
 import React, {useState, useContext}from 'react'
 import { useForm } from "react-hook-form";
 import { UserContext } from '../../context/userContext'
+import './userAuth.styles.scss'
 const axios = require('axios');
 function UserAuth() {
     const [hasAccount, setHasAccount]=useState(true)
@@ -41,7 +42,7 @@ const SignIn = () => {
     };
     const { register, handleSubmit, watch, errors } = useForm();
     return(
-        <div>
+        <div className="Auth">
             <form onSubmit={handleSubmit(onSubmit)}>
                 <label>User Name: </label>
                 <input name="username" type="text" ref={register({ required: true })} />
@@ -77,7 +78,7 @@ const SignUP = ()=>{
     };
     const { register, handleSubmit, watch, errors } = useForm();
     return(
-        <div>
+        <div className="Auth">
         <form onSubmit={handleSubmit(onSubmit)}>
         
         <label>User name: </label>

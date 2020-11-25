@@ -1,0 +1,43 @@
+.Auth{
+    text-align: left;
+    form{
+        width: 540px;
+        margin: 0 auto;
+        padding: 30px;
+        background: white;
+        border: 2px solid black;
+    }
+    label{
+        margin-top: 20px;
+        display: block;
+    }
+    input{
+        display: block;
+        width: 510px;
+        padding: 10px;
+        margin:0;
+    }
+    .halfInput{
+        width: 240px;
+        
+    }
+    select{
+        display: block;
+        width: 263px;
+        padding: 10px;
+        margin: 0;
+    }
+    .btn{
+        margin: 20px auto;
+        padding:10px;
+        background: white;
+        border-radius:8px;
+        width: 95%;
+    }
+    .btn:hover{
+        cursor: pointer;
+        color: white;
+        background: black;
+    }
+
+}

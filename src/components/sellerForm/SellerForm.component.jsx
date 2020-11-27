@@ -11,10 +11,11 @@ function SellerForm() {
   const postData = {...data, ...user}
     axios.post('https://esscre.herokuapp.com/art', postData)
           .then(function (response) {
-            alert(response)
+            console.log("sellerpost response: ",response)
+            alert("form submitted")
         })
           .catch(function (error) {
-            alert('some error occured please try again')
+            alert('Some error occured, please try again')
           });
   };
     return (

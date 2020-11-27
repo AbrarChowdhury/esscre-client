@@ -1,7 +1,7 @@
 import React from 'react'
 import NavGrid from '../../components/navGrid/navGrid.component'
 import CarouselContainer from '../../components/carouselContainer/CarouselContainer.component'
-
+import Info from '../../components/info/info.component'
 function Home() {
     return (
         <div>
@@ -12,6 +12,7 @@ function Home() {
             -Kurt Vonnegut
             </p>
             <NavGrid/>
+            <Info/>
         </div>
     )
 }

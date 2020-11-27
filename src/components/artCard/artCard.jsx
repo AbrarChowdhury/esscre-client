@@ -40,10 +40,10 @@ function ArtCard({data}) {
             {data.title}
           </Typography>
           <Typography variant="body3" color="textSecondary" component="h3">
-          Worth: {data.price}
+          By: {data.artist  }
           </Typography>
           <Typography variant="body2" color="textSecondary" component="p">
-          By: {data.artist  }
+          Worth: {data.price}
           </Typography>
         </CardContent>
       </CardActionArea>

@@ -11,10 +11,11 @@ function CodForm({arts}){
         console.log('post data', postData )
         axios.post('https://esscre.herokuapp.com/order', postData)
             .then(function (response) {
-                alert(response)
+                console.log("cod form post response: ",response)
+                alert("your order has been placed");
             })
             .catch(function (error) {
-                alert('some error occured please try again')
+                alert('Some error occured, please try again');
             })
         } 
     return (

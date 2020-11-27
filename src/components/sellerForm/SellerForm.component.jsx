@@ -59,7 +59,7 @@ function SellerForm() {
               
               <Grid item xs={6}>
                 <label>Image Url:</label>
-                <input name="image" type="text" ref={register({ required: true })} />
+                <input className="halfInput" name="image" type="text" ref={register({ required: true })} />
                 {errors.price && <span>You must attach the image</span>}
               </Grid>
               

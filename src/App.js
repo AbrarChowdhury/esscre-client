@@ -11,12 +11,14 @@ import { BrowserRouter, Route } from 'react-router-dom'
 import ArtConetextProvider from './context/artContext'
 import CartContextProvider from './context/cartContex'
 import UserContextProvider from './context/userContext'
+import api from './context/apiContext'
 import axios from 'axios'
 import { ArtContext } from './context/artContext'
 function App() {
+  console.log(api, "from app js")
   const [data, setData] = useState(null);
   useEffect(() => {
-    axios.get('https://esscre.herokuapp.com/art')
+    axios.get(`${api}/art`)
   .then(function (response) {
     const responseData = response.data;
     console.log(responseData)
@@ -42,6 +44,7 @@ return(
     <div className="App">
     <CartContextProvider>
     <UserContextProvider>
+  
       <Navbar/>
       <div className="routes">
         <Route exact path='/' component = { Home }/>
@@ -51,6 +54,7 @@ return(
         <Route exact path='/custom' component = { CustomArt }/>       
         <Route exact path='/cart' component = { Checkout }/>       
       </div>
+
     </UserContextProvider>
     </CartContextProvider>
     </div>

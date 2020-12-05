@@ -1,6 +1,7 @@
 import React, {useState, useContext}from 'react'
 import { useForm } from "react-hook-form";
 import { UserContext } from '../../context/userContext'
+import api from '../../context/apiContext'
 import './userAuth.styles.scss'
 const axios = require('axios');
 function UserAuth() {
@@ -25,7 +26,7 @@ function UserAuth() {
 const SignIn = () => {
     const { authenticate } = useContext(UserContext)
     const onSubmit = data => {
-        axios.post('https://esscre.herokuapp.com/sign-in', data)
+        axios.post(`${api}/sign-in`, data)
           .then(function (response) {
             console.log('response : ',response.data);
             if(response.data){
@@ -60,7 +61,7 @@ const SignIn = () => {
 const SignUP = ()=>{
     const { authenticate } = useContext(UserContext)
     const onSubmit = data => {
-        axios.post('https://esscre.herokuapp.com/sign-up', data)
+        axios.post(`${api}/sign-up`, data)
           .then(function (response) {
             console.log('response : ',response.data);
             if(response.data){

@@ -5,12 +5,15 @@ import './ArtDisplay.styles.scss'
 import Grid from '@material-ui/core/Grid';
 import ModalImage from '../../components/modalImage/modalImage.component'
 import { ArtContext } from '../../context/artContext'
+
  
 
 function ArtDisplay(props) {
     const { artData } = useContext(ArtContext)
     const [ art, setArt ]= useState()
     const id =props.match.params.name
+
+   
     useEffect(()=>{
         
         artData && artData.map((currentArt) => (currentArt._id) === id ? setArt(currentArt):null)        

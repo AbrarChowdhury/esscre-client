@@ -1,6 +1,7 @@
 import React from 'react'
 import {useForm} from 'react-hook-form'
 import './CodForm.styles.scss'
+import api from '../../context/apiContext'
 const axios = require('axios')
 
 function CodForm({arts}){
@@ -9,7 +10,7 @@ function CodForm({arts}){
     const onSubmit = data => {
         const postData = { ...data, arts }
         console.log('post data', postData )
-        axios.post('https://esscre.herokuapp.com/order', postData)
+        axios.post(`${api}/order`, postData)
             .then(function (response) {
                 console.log("cod form post response: ",response)
                 alert("your order has been placed");

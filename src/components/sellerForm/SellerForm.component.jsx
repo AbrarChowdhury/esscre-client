@@ -1,6 +1,7 @@
 import React, {useContext} from 'react'
 import { UserContext } from '../../context/userContext'
 import { useForm } from "react-hook-form";
+import api from '../../context/apiContext'
 import './SellerForm.styles.scss'
 import Grid from '@material-ui/core/Grid'
 const axios = require('axios')
@@ -9,7 +10,7 @@ function SellerForm() {
   const { register, handleSubmit, watch, errors } = useForm();
   const onSubmit = data => {
   const postData = {...data, ...user}
-    axios.post('https://esscre.herokuapp.com/art', postData)
+    axios.post(`${api}/art`, postData)
           .then(function (response) {
             console.log("sellerpost response: ",response)
             alert("form submitted")

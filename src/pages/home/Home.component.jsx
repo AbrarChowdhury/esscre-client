@@ -1,6 +1,7 @@
 import React from 'react'
 import NavGrid from '../../components/navGrid/navGrid.component'
 import CarouselContainer from '../../components/carouselContainer/CarouselContainer.component'
+import TeamCarousel from '../../components/teamCarousel/teamCarousel.component'
 import Info from '../../components/info/info.component'
 function Home() {
     return (
@@ -13,6 +14,7 @@ function Home() {
             </p>
             <NavGrid/>
             <Info/>
+            <TeamCarousel/>
         </div>
     )
 }

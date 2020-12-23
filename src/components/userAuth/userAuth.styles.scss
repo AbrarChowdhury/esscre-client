@@ -41,3 +41,17 @@
     }
 
 }
+.account{
+    .form-button{
+        margin: 0 auto;
+        padding:10px;
+        background: white;
+        border-radius:8px;
+        width: 150px;
+    }
+    .form-button:hover{
+        cursor: pointer;
+        color: white;
+        background: black;
+    }
+}

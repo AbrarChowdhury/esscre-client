@@ -15,9 +15,9 @@ function UserAuth() {
          {
             hasAccount ? <SignIn/> : <SignUP/>
          }
-            <div>
+            <div className="account">
                 <p>{hasAccount? "Don't have an account?" : "already have an account?" }</p>
-                <button onClick={ toggleAccont }>{hasAccount? "Sign Up":"Sign In"}</button>
+                <button className="form-button" onClick={ toggleAccont }>{hasAccount? "Sign Up":"Sign In"}</button>
             </div>
         </div>
     )
@@ -105,12 +105,14 @@ const SignUP = ()=>{
         <label>Passion: </label>
         <input name="passion" type="text" ref={register({ required: true })} />
         {errors.email && <span>Please enter correct email address</span>}
-        <input className="btn" value="Sign In" type="submit" />
 
         <label>Profession: </label>
         <input name="profession" type="text" ref={register({ required: true })} />
         {errors.email && <span>Please enter correct email address</span>}
-    </form>  
+
+        <input className="btn" value="Register" type="submit" />
+
+        </form>  
         </div>
     )
 }

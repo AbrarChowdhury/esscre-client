@@ -7,7 +7,7 @@ function SellArt() {
   
 
   return (
-    <div>
+    <div className="full-page">
     {user ?  <SellerForm/> : <UserAuth/> }
     </div>
   );

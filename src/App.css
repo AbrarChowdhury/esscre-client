@@ -11,3 +11,7 @@
 .routes{
   padding: 0 15%;
 }
+
+.full-page{
+  min-height: 100vh;
+}

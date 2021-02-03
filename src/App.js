@@ -7,6 +7,7 @@ import ArtDisplay from './pages/artDisplay/ArtDisplay'
 import SellArt from './pages/sellArt/SellArt.component'
 import Checkout from './pages/checkout/Checkout'
 import CustomArt from './pages/customArt/CustomArt.component'
+import Footer from './components/footer/footer.component'
 import { BrowserRouter, Route } from 'react-router-dom'
 import ArtConetextProvider from './context/artContext'
 import CartContextProvider from './context/cartContex'
@@ -54,7 +55,7 @@ return(
         <Route exact path='/custom' component = { CustomArt }/>       
         <Route exact path='/cart' component = { Checkout }/>       
       </div>
-
+    <Footer/>
     </UserContextProvider>
     </CartContextProvider>
     </div>

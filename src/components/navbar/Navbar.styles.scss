@@ -1,34 +1,40 @@
 
 .Navbar{
     box-shadow: 0 2px 2px -2px rgba(0,0,0,.3);
-ul {
-    list-style-type: none;
-    margin: 0;
-    margin-bottom: 20px;
-    padding: 0 15%;
-    overflow: hidden;
-    background-color: #E4E5E7; 
-  }
-  li {
-    float: right;
-  }
-  .brand{
-      float: left;
-  }
- 
-  li a {
-    display: block;
+    padding: 10px 10vw;
+    font-size: large;
+  .links,.brand{
     color: rgb(31, 29, 29);
-    text-align: center;
-    padding: 14px 16px;
     text-decoration: none;
+    &:hover{
+      background-color: rgba(17, 17, 17, 0.2);
+    }
   }
-  
-  li a:hover {
-    background-color: rgba(17, 17, 17, 0.2);
+  .links{
+    padding-right: 30px;
+  }
+  .big-link-container{
+    display: none;
+  }
+  .nav-btn-container{
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: 50px 1fr 50px;
+    align-items: center;
+    .justify-right{
+      justify-self: end;
+    }
   }
   .active {
     text-decoration: underline;
+  }
+  @media (min-width: 600px) {
+    .big-link-container{
+      display: block;
+    }
+    .hamburger{
+      display: none
+    }
   }
 
 }

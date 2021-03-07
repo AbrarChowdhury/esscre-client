@@ -17,4 +17,31 @@
     .box{
         padding:20px
     }
+    .wrapper{
+        display:grid;
+        grid-template-areas: 
+            'image image'
+            'primary-info primary-info'
+            'add-btn check-btn'
+            'secondary-info secondary-info'
+            'story story';
+        grid-gap: 10px;
+        .image-title{ grid-area: image; }
+        .primary-info{ grid-area: primary-info; }
+        .add-btn{ grid-area: add-btn; }
+        .check-btn{ grid-area: check-btn; }
+        .secondary-info{ grid-area: secondary-info; }
+        .story{ grid-area: story; }
+
+    }
+    @media (min-width: 960px) {
+        .wrapper{
+            grid-template-areas: 
+                'image image'
+                'primary-info secondary-info'
+                'add-btn check-btn'
+                'story story';
+            grid-gap: 20px;
+        }
+    }
 }

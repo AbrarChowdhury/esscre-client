@@ -1,13 +1,13 @@
 
 .Navbar{
     box-shadow: 0 2px 2px -2px rgba(0,0,0,.3);
-    padding: 10px 10vw;
+    padding: 0 10vw;
     font-size: large;
   .links,.brand{
     color: rgb(31, 29, 29);
     text-decoration: none;
     &:hover{
-      background-color: rgba(17, 17, 17, 0.2);
+      color: rgba(17, 17, 17, 0.5);
     }
   }
   .links{

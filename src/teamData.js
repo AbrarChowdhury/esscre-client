@@ -41,7 +41,7 @@ const teamData= [
     {
         name:"Shahadat Hossain",
         designation: "Front-end Developer",
-        image: "axel.jpg"
+        image: "tahmid.jpg"
     },  
     {
         name:"Aswad Azim Russo",

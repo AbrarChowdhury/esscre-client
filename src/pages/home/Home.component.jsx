@@ -15,6 +15,9 @@ function Home() {
             <NavGrid/>
             <Info/>
             <TeamCarousel/>
+            <h1>Advisory Panel</h1>
+            <h1>Supported By</h1>
+            <h1>In Affiliation With</h1>
         </div>
     )
 }

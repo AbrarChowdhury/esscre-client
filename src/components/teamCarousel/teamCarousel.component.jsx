@@ -10,7 +10,7 @@ teamData.map((person,i) => {
     people.push(<div className="item" data-value={i}><PeopleCard name={person.name} title={person.title} designation={person.designation} image={person.image} /></div>)
 })
 
-const team = teamData.map((person,i)=><PeopleCard key={i} name={person.name} title={person.title} designation={person.designation} image={person.image} />)
+const team = teamData.map((person,i)=><PeopleCard key={i} name={person.name} title={person.title} designation={person.designation} image={`./team/${person.image}`} />)
 function TeamCarousel({advisor}) {
     var settings = {
         dots: true,
